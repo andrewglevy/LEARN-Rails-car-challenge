@@ -1,0 +1,36 @@
+<%= flash.now[:notice] = @flash%>
+
+<h2>Here is your car:</h2>
+Year:  <%= @car.year %>
+<br>
+Make: <span style=<%="background-color:" + session[:color].to_s %>> <%= @car.make %> </span>
+<br>
+Model: <%= @car.model %>
+<br>
+<%= @car.lightstatus %>
+<br>
+<%= @car.parking_brake_status %>
+<br>
+Speed: <%= @car.speed %> miles per hour
+<br>
+<!-- <button type="button">Accelerate</button> -->
+<form method="get" action="accelerate">
+  <input value="Accelerate" type="submit"/>
+</form>
+<form method="get" action="brake">
+  <input value="Brake" type="submit"/>
+</form>
+<form method="get" action="lightswitch">
+  <input value="Lightswitch" type="submit"/>
+</form>
+<form method="get" action="pbrake">
+  <label>Parking Brake</label>
+  <br>
+  <label>On</label>
+  <input name="pbrake" value="on" type="radio"/>
+  <br>
+  <label>Off</label>
+  <input name="pbrake" value="off" type="radio"/>
+  <br>
+  <input value="Parking Brake On/Off" type="submit"/>
+</form>

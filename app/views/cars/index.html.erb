@@ -1,0 +1,12 @@
+<h1>Welcome to the Car Simulator</h1>
+<br>
+<br>
+<!-- <%= flash.now[:notice] = @indexflash%> -->
+<form action="status" method="get">
+  <input type="number" name="year" placeholder="year"/>
+  <input type="text" name="make" placeholder="make"/>
+  <input type="text" name="model" placeholder="model"/>
+  <label>Pick a color</label>
+  <input type="color" name="color" value="#ff0000">
+  <input type="submit" value="Simulate Car"/>
+</form>
